@@ -20,11 +20,12 @@ Proceso local, reproducible y privado para convertir videos de formación y llam
 ## Inicio seguro
 
 1. Seguir [docs/PILOT_CHECKLIST.md](docs/PILOT_CHECKLIST.md): prepara el entorno y limita cada avance.
-2. Crear un workspace local con [scripts/Initialize-Workspace.ps1](scripts/Initialize-Workspace.ps1).
-3. Verificar binarios, espacio y GPU opcional con [scripts/Test-Prerequisites.ps1](scripts/Test-Prerequisites.ps1).
-4. Ejecutar una prueba de humo de 3 a 5 minutos; después, un único piloto de 8 a 12 minutos.
-5. Aplicar la validación estratificada y ciega de [docs/QUALITY_GATE.md](docs/QUALITY_GATE.md).
-6. Sólo con una aprobación explícita, procesar el primer lote limitado. Nunca lanzar el lote completo por una única prueba satisfactoria.
+2. Para videos con producto en movimiento, ejecutar primero [docs/MOTION_PRODUCT_PILOT.md](docs/MOTION_PRODUCT_PILOT.md).
+3. Crear un workspace local con [scripts/Initialize-Workspace.ps1](scripts/Initialize-Workspace.ps1).
+4. Verificar binarios, espacio y GPU opcional con [scripts/Test-Prerequisites.ps1](scripts/Test-Prerequisites.ps1).
+5. Ejecutar una prueba de humo de 3 a 5 minutos; después, un único piloto de 8 a 12 minutos.
+6. Aplicar la validación estratificada y ciega de [docs/QUALITY_GATE.md](docs/QUALITY_GATE.md).
+7. Sólo con una aprobación explícita, procesar el primer lote limitado. Nunca lanzar el lote completo por una única prueba satisfactoria.
 
 ## Herramientas elegidas
 
@@ -41,6 +42,7 @@ La diarización de hablantes no se considera fiable por defecto y no bloquea la 
 
 - docs/OPERATIONS.md: operación, privacidad, lotes e incidentes.
 - docs/PILOT_CHECKLIST.md: avance gradual y puntos de detención.
+- docs/MOTION_PRODUCT_PILOT.md: validación visual de objetos en movimiento.
 - docs/QUALITY_GATE.md: diseño de validación, métricas, umbrales y decisión.
 - scripts/: preparación local y preflight técnico.
 - .gitignore: barreras para que datos sensibles y modelos no entren al repositorio.
