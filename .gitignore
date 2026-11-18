@@ -1,0 +1,32 @@
+# Datos y derivados locales: nunca versionar
+workspace/
+data/
+models/
+logs/
+.env
+.env.*
+!.env.example
+
+# Medios y transcripciones que pueden contener información privada
+*.mp4
+*.m4v
+*.mov
+*.mkv
+*.avi
+*.webm
+*.mp3
+*.m4a
+*.wav
+*.flac
+*.opus
+*.srt
+*.vtt
+*.ass
+
+# Índices locales y salidas de modelos
+*.sqlite
+*.db
+*.parquet
+*.jsonl
+*.gguf
+*.bin
