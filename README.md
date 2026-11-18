@@ -19,12 +19,12 @@ Proceso local, reproducible y privado para convertir videos de formación y llam
 
 ## Inicio seguro
 
-1. Leer [docs/OPERATIONS.md](docs/OPERATIONS.md).
-2. Crear un workspace fuera del repositorio y descargar allí sólo contenido al que se tenga derecho de acceso.
-3. Transcribir el conjunto piloto estratificado.
-4. Construir la referencia humana y ejecutar la evaluación ciega.
-5. Aprobar o ajustar la configuración mediante la puerta de calidad.
-6. Procesar por lotes con controles canario y auditorías. Nunca lanzar el lote completo por una única prueba satisfactoria.
+1. Seguir [docs/PILOT_CHECKLIST.md](docs/PILOT_CHECKLIST.md): prepara el entorno y limita cada avance.
+2. Crear un workspace local con [scripts/Initialize-Workspace.ps1](scripts/Initialize-Workspace.ps1).
+3. Verificar binarios, espacio y GPU opcional con [scripts/Test-Prerequisites.ps1](scripts/Test-Prerequisites.ps1).
+4. Ejecutar una prueba de humo de 3 a 5 minutos; después, un único piloto de 8 a 12 minutos.
+5. Aplicar la validación estratificada y ciega de [docs/QUALITY_GATE.md](docs/QUALITY_GATE.md).
+6. Sólo con una aprobación explícita, procesar el primer lote limitado. Nunca lanzar el lote completo por una única prueba satisfactoria.
 
 ## Herramientas elegidas
 
@@ -40,6 +40,7 @@ La diarización de hablantes no se considera fiable por defecto y no bloquea la 
 ## Estructura versionada
 
 - docs/OPERATIONS.md: operación, privacidad, lotes e incidentes.
+- docs/PILOT_CHECKLIST.md: avance gradual y puntos de detención.
 - docs/QUALITY_GATE.md: diseño de validación, métricas, umbrales y decisión.
+- scripts/: preparación local y preflight técnico.
 - .gitignore: barreras para que datos sensibles y modelos no entren al repositorio.
-
