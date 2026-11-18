@@ -11,6 +11,15 @@ Objetivo: demostrar que el entorno puede trabajar localmente.
 3. Ejecutar scripts/Test-Prerequisites.ps1 contra el workspace.
 4. Conservar el informe local y no subirlo si contiene rutas o datos personales.
 
+Ejemplo desde la carpeta clonada del repositorio:
+
+    .\scripts\Initialize-Workspace.ps1 -WorkspacePath "D:\formacion-local"
+    .\scripts\Test-Prerequisites.ps1 -WorkspacePath "D:\formacion-local"
+
+Si los binarios no están en PATH, señalar los ejecutables sin instalar ni descargar contenido de formación:
+
+    .\scripts\Test-Prerequisites.ps1 -WorkspacePath "D:\formacion-local" -FfmpegCommand "D:\herramientas\ffmpeg.exe" -WhisperCommand "D:\herramientas\whisper-cli.exe"
+
 Se puede pasar al punto 1 sólo cuando el informe indique ready_for_smoke_test: true.
 
 ## Punto 1 — Prueba de humo: un clip de 3 a 5 minutos
